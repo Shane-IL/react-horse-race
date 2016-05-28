@@ -1,0 +1,45 @@
+{
+  "name": "react-horse-race",
+  "version": "1.0.0",
+  "description": "Horse race app using React JS client and socket.io server",
+  "main": "./js/src/app.js",
+  "scripts": {
+    "dev": "webpack -d --watch",
+    "dev-inline": "webpack-dev-server --content-base src --inline --hot",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Shane-IL@github.com/Shane-IL/react-horse-race.git"
+  },
+  "author": "Shane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shane-IL/react-horse-race/issues"
+  },
+  "homepage": "https://github.com/Shane-IL/react-horse-race#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "history": "^2.1.2",
+    "jquery": "^2.2.3",
+    "lodash": "^4.11.2",
+    "mobx": "^2.2.0",
+    "mobx-react": "^3.3.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1",
+    "socket.io": "^1.4.6",
+    "socket.io-client": "^1.4.6",
+    "velocity": "^0.7.2",
+    "velocity-animate": "^1.2.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.8.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "webpack": "^1.13.0"
+  }
+}
