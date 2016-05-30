@@ -15,11 +15,6 @@ var _horseNamePool = [
 
 var _horseAvatarPool = [];
 
-var _bettingData = {
-    bettingPool: 0,
-    bets: []
-};
-
 //TODO: Current config works with one socket, figure out how to manage and use multiple sockets.
 
 io.on('connection', function(socket){
@@ -28,12 +23,17 @@ io.on('connection', function(socket){
 
     socket.emit('getRaceData', null /*use race manager to process relevant data for client on initial connect*/);
 
-    socket.on('lockBet', function (betData) {
-       //use id to save bet amount and horse per user and increment betting pool
+    socket.on('setBet', function (betData) {
+        BettingManager.setBet(socket.id, betData);
     });
 
+    socket.on('lockBet', function () {
+        BettingManager.lockBet(socket.id);
+    });
+
+
     socket.on('pullOut', function () {
-        //deregister client from bettingData
+        BettingManager.deRegisterBet(socket.id);
     });
 });
 
